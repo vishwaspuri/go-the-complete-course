@@ -10,21 +10,11 @@
 
 package main
 
+import "fmt"
+
 func main() {
-	// // // cards := deck{newCard(), "Ace of Diamonds"}
-	// // // cards = append(cards, "Six of spades")
-	// // // cards.print()
-	// // // fmt.Println(cards)
-	// // cards := newDeck()
-	// // // cards.print()
-	// // hand, remainingDeck := deal(cards, 5)
-	// // fmt.Println("Hand: ")
-	// // hand.print()
-	// // fmt.Println("Remaining Deck: ")
-	// // remainingDeck.print()
-	// greeting := "Hi, there."
-	// fmt.Println([]byte(greeting))
-	cards := 
+	cards := newDeck()
+	fmt.Println(cards.toString())
 }
 
 // Function declaration in go
