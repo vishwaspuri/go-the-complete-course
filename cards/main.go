@@ -14,7 +14,8 @@ import "fmt"
 
 func main() {
 	cards := newDeck()
-	fmt.Println(cards.toString())
+	res := cards.saveToFile("my_cards")
+	fmt.Println(res)
 }
 
 // Function declaration in go
