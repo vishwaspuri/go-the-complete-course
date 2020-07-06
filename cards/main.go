@@ -10,12 +10,10 @@
 
 package main
 
-import "fmt"
-
 func main() {
-	cards := newDeck()
-	res := cards.saveToFile("my_cards")
-	fmt.Println(res)
+	cards := newDeckFromFile("my_cards")
+	cards.shuffle()
+	cards.print()
 }
 
 // Function declaration in go

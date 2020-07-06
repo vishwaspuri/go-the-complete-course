@@ -3,8 +3,10 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"math/rand"
 	"os"
 	"strings"
+	"time"
 )
 
 // Create a new type of 'deck'
@@ -54,4 +56,15 @@ func newDeckFromFile(filename string) deck {
 	// If no error
 	sOS := strings.Split(string(bs), ",") // Slice of string
 	return deck(sOS)
+}
+
+func (d deck) shuffle() {
+	// Truly random random number generator
+	// Creating a new source object
+	source := rand.NewSource(time.Now().UnixNano()) // Using time to get a slightly different value for seed
+	r := rand.New(source)                           // Creating a new rand variable using that seed
+	for index := range d {
+		newPosition := r.Intn(len(d) - 1) // Sudo random generator, uses same seed everytime
+		d[index], d[newPosition] = d[newPosition], d[index]
+	}
 }
