@@ -14,9 +14,13 @@ type person struct {
 }
 
 func main() {
-	var alex person
-	fmt.Println(alex)
-	alex.firstName = "Alex"
-	alex.lastName = "Anderson"
-	fmt.Printf("%+v\n", alex)
+	jim := person{
+		firstName: "Jim",
+		lastName:  "Party",
+		contact: contactInfo{
+			email:   "jim@gmail.com",
+			zipCode: 12345,
+		},
+	}
+	fmt.Printf("%+v\n", jim)
 }
