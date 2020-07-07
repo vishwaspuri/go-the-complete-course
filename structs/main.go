@@ -2,14 +2,21 @@ package main
 
 import "fmt"
 
+type contactInfo struct {
+	email   string
+	zipCode int
+}
+
 type person struct {
 	firstName string
 	lastName  string
+	contact   contactInfo
 }
 
 func main() {
-	// Ways of creating struct instaces
-	alex := person{"Alex", "Anderson"}
-	vishwas := person{firstName: "Vishwas", lastName: "Puri"}
-	fmt.Println(alex, vishwas)
+	var alex person
+	fmt.Println(alex)
+	alex.firstName = "Alex"
+	alex.lastName = "Anderson"
+	fmt.Printf("%+v\n", alex)
 }
