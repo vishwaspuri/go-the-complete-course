@@ -12,7 +12,7 @@ func main() {
 }
 
 func printMap(c map[string]string) {
-	for color, hex := range c {
+	for color, hex := range c { // Key, value
 		fmt.Println("Hexcode for", color, "is", hex, "\b.")
 	}
 }
