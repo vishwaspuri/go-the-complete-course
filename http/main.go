@@ -25,5 +25,7 @@ func main() {
 }
 
 func (logWriter) Write(bs []byte) (int, error) {
-	return 1, nil
+	fmt.Println(string(bs))
+	fmt.Println("\nJust wrote this many bytes: ", len(bs), ".\n")
+	return len(bs), nil
 }
